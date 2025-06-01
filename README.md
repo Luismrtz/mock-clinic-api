@@ -1,4 +1,4 @@
-# Mock Medical API
+# Mock Clinic API
 
 API for managing doctors, locations, and specializations.  
 Built with Flask, SQLAlchemy, Postgres, and Docker.
