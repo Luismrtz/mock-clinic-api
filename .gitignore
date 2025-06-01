@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+*.egg
+
+#virtual environments
+venv/
+
+# Secrets
+.env
+.env.*
+
+# Docker
+db_data/
+*.db
+
+# VSCode settings
+.vscode/
+
+# MacOS & Windows system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Cache (optional, safe default)
+.cache/
+__pypackages__/

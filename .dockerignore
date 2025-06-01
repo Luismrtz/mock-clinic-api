@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+
+#virtual environments
+venv/
+
+# Environment variables
+.env
+.env.*
+
+
+# Local files
+*.db
+db_data/
+
+# Editor junk
+.vscode/
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Git
+.git
+.gitignore
+
+# Misc
+*.log
