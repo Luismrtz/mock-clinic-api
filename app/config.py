@@ -1,10 +1,25 @@
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
+
+
+class DevConfig(Config):
+    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
+
+
+class TestConfig(Config):
+    SQLALCHEMY_DATABASE_URI = "sqlite:///:memory_"
+
+
+class ProdConfig(Config):
+    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
+
+
+def get_config(env_name):
+    return {
+        "dev": DevConfig,
+        "test": TestConfig,
+        "prod": ProdConfig,
+    }.get(env_name, DevConfig)
