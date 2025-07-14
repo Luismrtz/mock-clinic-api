@@ -31,3 +31,7 @@ Desktop.ini
 
 # Misc
 *.log
+
+
+#Migrations
+migrations/__pycache__/

@@ -30,3 +30,5 @@ Desktop.ini
 # Cache (optional, safe default)
 .cache/
 __pypackages__/
+
+migrations/__pycache__/
