@@ -10,7 +10,10 @@ class DevConfig(Config):
 
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = "sqlite:///:memory_"
+    uri = os.getenv("TEST_DATABASE_URL")
+    if not uri:
+        raise RuntimeError("Must set TEST_DATABASE_URL for tests.")
+    SQLALCHEMY_DATABASE_URI = uri
 
 
 class ProdConfig(Config):

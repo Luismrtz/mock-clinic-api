@@ -8,4 +8,6 @@ doctor_bp = Blueprint("doctor", __name__)
 @doctor_bp.route("/", methods=["GET"])
 def get_doctors():
     doctors = list_doctors()
-    return jsonify([DoctorRead.from_orm(doc).dict() for doc in doctors])
+    return jsonify(
+        [DoctorRead.model_validate(doc).model_dump(mode="json") for doc in doctors]
+    )

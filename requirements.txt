@@ -5,3 +5,6 @@ psycopg2-binary
 Flask-JWT-Extended
 Pydantic[email]
 python-dotenv
+pytest
+pytest-flask
+pytest-cov

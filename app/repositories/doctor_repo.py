@@ -1,6 +1,5 @@
 from app.models import Doctor
-from app.db import db
 
 
 def get_all_doctors():
-    return Doctor.query.all()
+    return Doctor.query.order_by(Doctor.last_name.asc(), Doctor.first_name.asc()).all()
